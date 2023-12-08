@@ -51,12 +51,15 @@ const Header = () => {
   }, [header]);
 
   const data = [
-    { title: "Gelinlerimiz", arr: "arrDress" },
+    { title: "Koynekler", arr: "arrDress" },
     { title: "Gelinlerimiz", arr: "arrBrides" },
     { title: "Hair and make up", arr: "arrHair_make" },
     { title: "Hair", arr: "arrHair" },
     { title: "Make up", arr: "arrMakeUp" },
     { title: "Nails", arr: "arrNail" },
+    { title: "Photo Session", arr: "arrSession", video: true },
+    { title: "Open Party", arr: "arrParty", video: true },
+    { title: "Love Story", arr: "arrStory", video: true },
   ];
   return (
     <header className="header" ref={header}>
@@ -190,15 +193,27 @@ const Header = () => {
                       </span>
                     </button>
                     <div className="dropdown__content">
-                      <a href="#" className="dropdown__content-item">
+                      <Link
+                        to={"gallery"}
+                        state={data[6]}
+                        className="dropdown__content-item"
+                      >
                         <span className="text">Photo Session</span>
-                      </a>
-                      <a href="#" className="dropdown__content-item">
+                      </Link>
+                      <Link
+                        to={"gallery"}
+                        state={data[7]}
+                        className="dropdown__content-item"
+                      >
                         <span className="text">Open Party</span>
-                      </a>
-                      <a href="#" className="dropdown__content-item">
+                      </Link>
+                      <Link
+                        to={"gallery"}
+                        state={data[8]}
+                        className="dropdown__content-item"
+                      >
                         <span className="text">Love Story</span>
-                      </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

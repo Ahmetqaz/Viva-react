@@ -78,3 +78,17 @@ export const copy = (
     ></path>
   </svg>
 );
+export const play = (
+  <svg
+    width="16"
+    height="23"
+    viewBox="0 0 16 23"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M0.825317 0.750001L19.5753 11.5753L0.825316 22.4006L0.825317 0.750001Z"
+      fill="currentColor"
+    />
+  </svg>
+);

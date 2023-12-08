@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useState } from "react";
 import { useLocation } from "react-router-dom";
 import { PopUpCreate } from "../utils/PopUpControl";
 import {
@@ -9,6 +9,10 @@ import {
   arrMakeUp,
   arrHair_make,
 } from "../data/DataImages";
+import { arrParty, arrSession, arrStory } from "../data/DataVideos";
+import { play } from "../components/Svg.";
+
+
 
 const Grid = () => {
   const location = useLocation();
@@ -32,23 +36,47 @@ const Grid = () => {
     if (state.arr === "arrHair_make") {
       return arrHair_make;
     }
+    if (state.arr === "arrSession") {
+      return arrSession;
+    }
+    if (state.arr === "arrParty") {
+      return arrParty;
+    }
+    if (state.arr === "arrStory") {
+      return arrStory;
+    }
   };
-
   let renderArr = controlArr();
+  console.log(renderArr);
   return (
     <section className="grid">
       <div className="autoContainer autoContainer--sm">
         <div className="grid__row">
           {renderArr.map((item, i) => (
             <div
-              className="grid__item"
+              className={`grid__item ${state.video ? "grid__item--video" : ""}`}
               key={i}
-              onClick={(e) => {
-                PopUpCreate(e);
+              onClick={() => {
+                PopUpCreate(item, state.video);
               }}
             >
+              {state.video ? <div className="grid__item-bg"></div> : ""}
+              {state.video ? (
+                <button className="button button--play">
+                  <span className="ico">{play}</span>
+                </button>
+              ) : (
+                ""
+              )}
+
               <div className="ratioImage">
-                <img src={item} alt="pic" />
+                {state.video ? (
+                  <video>
+                    <source src={item}></source>
+                  </video>
+                ) : (
+                  <img src={item} alt="pic" />
+                )}
               </div>
             </div>
           ))}

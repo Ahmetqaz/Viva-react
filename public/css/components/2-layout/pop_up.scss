@@ -12,18 +12,24 @@
   pointer-events: none;
   transition: 0.3s ease-in-out;
   &__inner {
-    padding: 200px 35px 50px;
+    padding: 50px 35px 50px;
     flex: 1;
     overflow: auto;
+    display: flex;
+    flex-direction: column;
   }
   .grid {
     &__item {
-      margin: 0 auto;
+      margin: auto;
       width: 100%;
       max-width: 900px;
-      border-radius: 20px;
       .ratioImage {
-        padding-bottom: 67%;
+        padding-bottom: 70%;
+      }
+      &--video {
+        .ratioImage {
+          padding-bottom: 75%;
+        }
       }
     }
   }
@@ -44,7 +50,7 @@ body {
 @mixin popUp-860 {
   .popUp {
     &__inner {
-      padding: 150px 30px 50px;
+      padding: 50px 30px 50px;
     }
     .grid {
       &__item {
@@ -55,11 +61,10 @@ body {
     }
   }
 }
-
 @mixin popUp-580 {
   .popUp {
     &__inner {
-      padding: 120px 30px 50px;
+      padding: 50px 30px 50px;
     }
     .grid {
       &__item {

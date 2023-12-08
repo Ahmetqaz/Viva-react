@@ -25,10 +25,18 @@
       font-size: 20px;
       gap: 18px;
       word-break: break-all;
+      @include transition;
       .ico {
         width: 20px;
         height: 20px;
         color: $white;
+        @include transition;
+      }
+      &:hover {
+        color: $primary;
+        .ico {
+          color: $primary;
+        }
       }
       .text {
         @include ellipsis(1);
