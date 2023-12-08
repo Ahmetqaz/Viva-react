@@ -1,7 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import CustomSelect from "../utils/CustomSelect";
 import { Link } from "react-router-dom";
-
 const Header = () => {
   const [state, setState] = useState("active");
   const Tab = () => {
@@ -52,11 +51,12 @@ const Header = () => {
   }, [header]);
 
   const data = [
-    { title: "Gelinlerimiz", arr: "dress" },
-    { title: "Hair and make up", arr: "hair_make" },
-    { title: "Hair", arr: "hair" },
-    { title: "Make up", arr: "makeUp" },
-    { title: "Nails", arr: "nail" },
+    { title: "Gelinlerimiz", arr: "arrDress" },
+    { title: "Gelinlerimiz", arr: "arrBrides" },
+    { title: "Hair and make up", arr: "arrHair_make" },
+    { title: "Hair", arr: "arrHair" },
+    { title: "Make up", arr: "arrMakeUp" },
+    { title: "Nails", arr: "arrNail" },
   ];
   return (
     <header className="header" ref={header}>
@@ -111,14 +111,14 @@ const Header = () => {
                       </Link>
                       <Link
                         to={"gallery"}
-                        state={data[1]}
+                        state={data[2]}
                         className="dropdown__content-item"
                       >
                         <span className="text">Sach we make up</span>
                       </Link>
                       <Link
                         to={"gallery"}
-                        state={data[0]}
+                        state={data[1]}
                         className="dropdown__content-item"
                       >
                         <span className="text">Gelinlerimiz</span>
@@ -146,21 +146,21 @@ const Header = () => {
                     <div className="dropdown__content">
                       <Link
                         to={"gallery"}
-                        state={data[2]}
+                        state={data[3]}
                         className="dropdown__content-item"
                       >
                         <span className="text">Sach</span>
                       </Link>
                       <Link
                         to={"gallery"}
-                        state={data[3]}
+                        state={data[4]}
                         className="dropdown__content-item"
                       >
                         <span className="text">Make up</span>
                       </Link>
                       <Link
                         to={"gallery"}
-                        state={data[4]}
+                        state={data[5]}
                         className="dropdown__content-item"
                       >
                         <span className="text">Nails</span>
