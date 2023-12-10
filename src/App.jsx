@@ -13,7 +13,7 @@ const App = () => {
     <>
       <BrowserRouter>
         <main className="main" id="main">
-          <Header />
+          <Header strings={strings} />
           <Routes>
             <Route path="/" element={<Home strings={strings} />}></Route>
             <Route
@@ -21,7 +21,7 @@ const App = () => {
               element={<Gallery strings={strings} />}
             ></Route>
           </Routes>
-          <Footer />
+          <Footer strings={strings} />
           <div
             className="popUp"
             id="popUp"

@@ -3,7 +3,7 @@ import { useLocation } from "react-router-dom";
 import Hero from "../../base/Hero";
 import Grid from "../../base/Grid";
 
-const Gallery = () => {
+const Gallery = ({ strings }) => {
   const location = useLocation();
   const state = location.state;
   return (
@@ -12,6 +12,7 @@ const Gallery = () => {
         imgSrc={"./images/hero/hero-2.png"}
         size={true}
         title={state.title}
+        strings={strings}
       />
       <Grid />
     </>

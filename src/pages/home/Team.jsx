@@ -1,6 +1,6 @@
 import React from "react";
 
-const Team = () => {
+const Team = ({ strings }) => {
   return (
     <section className="team">
       <div className="autoContainer">
@@ -10,13 +10,9 @@ const Team = () => {
               <img src="./images/icons/team.svg" alt="ico" />
             </span>
             <h3>
-              <span className="text--primary">
-                Viva La’mour is Ashgabat based digital agency.
-              </span>
+              <span className="text--primary">{strings.team.title}</span>
               <br />
-              Our team is lead in creating digital products. But it’s not only
-              about creating, Sanly Bilim is about teaching and supporting moves
-              like gender equality.
+              {strings.team.p1}
             </h3>
           </div>
         </div>

@@ -1,7 +1,8 @@
 import React, { useEffect, useState, useRef } from "react";
-import CustomSelect from "../utils/CustomSelect";
 import { Link } from "react-router-dom";
-const Header = () => {
+import { SwitchLang } from "../components/SwitchLang";
+const Header = ({ strings }) => {
+  console.log();
   const [state, setState] = useState("active");
   const Tab = () => {
     const dropdown = document.querySelectorAll(".dropdown");
@@ -27,7 +28,6 @@ const Header = () => {
     }
   };
   useEffect(() => {
-    CustomSelect();
     Tab();
   });
   const [menu, setMenu] = useState(false);
@@ -49,17 +49,16 @@ const Header = () => {
     }
     return () => window.removeEventListener("scroll", onScroll);
   }, [header]);
-
   const data = [
-    { title: "Koynekler", arr: "arrDress" },
-    { title: "Gelinlerimiz", arr: "arrBrides" },
-    { title: "Hair and make up", arr: "arrHair_make" },
-    { title: "Hair", arr: "arrHair" },
-    { title: "Make up", arr: "arrMakeUp" },
-    { title: "Nails", arr: "arrNail" },
-    { title: "Photo Session", arr: "arrSession", video: true },
-    { title: "Open Party", arr: "arrParty", video: true },
-    { title: "Love Story", arr: "arrStory", video: true },
+    { title: 1, arr: "arrDress" },
+    { title: 2, arr: "arrBrides" },
+    { title: 3, arr: "arrHair_make" },
+    { title: 4, arr: "arrHair" },
+    { title: 5, arr: "arrMakeUp" },
+    { title: 6, arr: "arrNail" },
+    { title: 7, arr: "arrSession", video: true },
+    { title: 8, arr: "arrParty", video: true },
+    { title: 9, arr: "arrStory", video: true },
   ];
   return (
     <header className="header" ref={header}>
@@ -85,9 +84,9 @@ const Header = () => {
                   <div className="dropdown">
                     <button className="button button--ico dropdown__button">
                       <span className="text">
-                        Viva La Mour
+                        {strings.header.button1}
                         <br />
-                        Wedding House
+                        {strings.header.button1_text}
                       </span>
                       <span className="ico">
                         <svg
@@ -110,27 +109,27 @@ const Header = () => {
                         state={data[0]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Koynekler</span>
+                        <span className="text">{strings.header.link1}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[2]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Sach we make up</span>
+                        <span className="text">{strings.header.link2}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[1]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Gelinlerimiz</span>
+                        <span className="text">{strings.header.link3}</span>
                       </Link>
                     </div>
                   </div>
                   <div className="dropdown">
                     <button className="button button--ico dropdown__button">
-                      <span className="text">Viva Beauty</span>
+                      <span className="text">{strings.header.button2}</span>
                       <span className="ico">
                         <svg
                           width="13"
@@ -152,30 +151,30 @@ const Header = () => {
                         state={data[3]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Sach</span>
+                        <span className="text">{strings.header.link4}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[4]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Make up</span>
+                        <span className="text">{strings.header.link5}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[5]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Nails</span>
+                        <span className="text">{strings.header.link6}</span>
                       </Link>
                     </div>
                   </div>
                   <div className="dropdown">
                     <button className="button button--ico dropdown__button">
                       <span className="text">
-                        Viva La Mour
+                        {strings.header.button3}
                         <br />
-                        Production
+                        {strings.header.button3_text}
                       </span>
                       <span className="ico">
                         <svg
@@ -198,54 +197,27 @@ const Header = () => {
                         state={data[6]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Photo Session</span>
+                        <span className="text"> {strings.header.link7}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[7]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Open Party</span>
+                        <span className="text">{strings.header.link8}</span>
                       </Link>
                       <Link
                         to={"gallery"}
                         state={data[8]}
                         className="dropdown__content-item"
                       >
-                        <span className="text">Love Story</span>
+                        <span className="text">{strings.header.link9}</span>
                       </Link>
                     </div>
                   </div>
                 </div>
               </div>
-              <div className="input input--select">
-                <input type="hidden" />
-                <div className="input__selected"></div>
-                <ul className="input__dropdown">
-                  <li
-                    className="input__dropdown-item"
-                    data-value="En"
-                    data-default
-                  >
-                    <span className="text">En</span>
-                    <span className="ico">
-                      <img src="./images/language/english.svg" alt="ico" />
-                    </span>
-                  </li>
-                  <li className="input__dropdown-item" data-value="Tkm">
-                    <span className="text">Tkm</span>
-                    <span className="ico">
-                      <img src="./images/language/turkmen.svg" alt="ico" />
-                    </span>
-                  </li>
-                  <li className="input__dropdown-item" data-value="Rus">
-                    <span className="text">Rus</span>
-                    <span className="ico">
-                      <img src="./images/language/russian.svg" alt="ico" />
-                    </span>
-                  </li>
-                </ul>
-              </div>
+              <SwitchLang strings={strings} />
             </div>
           </nav>
         </div>

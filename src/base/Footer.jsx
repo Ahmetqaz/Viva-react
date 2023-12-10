@@ -1,6 +1,6 @@
 import React from "react";
 import { phone, instagram, titTok, copy } from "../components/Svg.";
-const Footer = () => {
+const Footer = ({ strings }) => {
   return (
     <footer className="footer">
       <div className="autoContainer">
@@ -8,10 +8,10 @@ const Footer = () => {
           <div className="footer__inner-row">
             <div className="footer__box">
               <div className="logo">Viva La’mour</div>
-              <p>Oguzhan street, home 120, Ashgabat, Turkmenistan</p>
+              <p>{strings.footer.address}</p>
             </div>
             <div className="footer__group">
-              <h4>Contact us</h4>
+              <h4>{strings.footer.title1}</h4>
               <div className="footer__socials">
                 <a href="#" className="footer__socials-button">
                   <span className="ico ico--stroke">{phone} </span>
@@ -30,7 +30,7 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer__group footer__group--space">
-              <h4>Social media accounts</h4>
+              <h4>{strings.footer.title2}</h4>
               <div className="footer__socials">
                 <a href="#" className="footer__socials-button">
                   <span className="ico ico--stroke">{instagram}</span>
@@ -65,7 +65,7 @@ const Footer = () => {
           </div>
           <div className="footer__copy">
             <span className="ico">{copy}</span>
-            <span className="text">2024, Viva La’mour. All Rights Reserved.</span>
+            <span className="text">{strings.footer.copy}</span>
           </div>
         </div>
       </div>

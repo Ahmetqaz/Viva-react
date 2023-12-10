@@ -1,7 +1,44 @@
 {
+  "header": {
+    "button1": "Viva La Mour",
+    "button1_text": "Toý öýi",
+    "link1": "Koyneklerimiz",
+    "link2": "Saç we makiýaz",
+    "link3": "Gelinlerimiz",
+    "button2": "Viva Gözellik",
+    "link4": "Saç",
+    "link5": "Makiýaz",
+    "link6": "Dyrnak",
+    "button3": "Viva La Mour",
+    "button3_text": "Önümçilik",
+    "link7": "Surat sessiýasy",
+    "link8": "Medeni çareler",
+    "link9": "Söýgi hekaýasy"
+  },
   "hero": {
-    "title1": "tkm",
-    "title2": "tkm",
-    "title3": "tkm"
+    "title1": "Koyneklerimiz",
+    "title2": "Saç we makiýaz",
+    "title3": "Gelinlerimiz",
+    "title4": "Saç",
+    "title5": "Makiýaz",
+    "title6": "Dyrnak",
+    "title7": "Surat sessiýasy",
+    "title8": "Medeni çareler",
+    "title9": "Söýgi hekaýasy"
+  },
+  "about": {
+    "title": "Viva La Mour Hakda",
+    "p1": "Dünýa derejesinde ussat hünarmenleri yetisdirmek, gelin-gyzlarymyzyn üçin täze isler iň yokary hilde bezeg isleri, toýlary, iň şatlyk günleriň şayady bolmak, doglan günleri yokary derejede geçirmek bizde yagny - Viva La'mour-da",
+    "p2": "Zenan gözelligine hasda gözellik goşmak yagny, saç, makiýaz, dyrnak, mundan başgada gelinlerimizi iň yokary hilde bezemek biziň işimiz!"
+  },
+  "team": {
+    "title": "Viva La’mour” Aşgabatda ýerleşýän sanly agentlikdir.",
+    "p1": "Toý günüňizde zerur bolup biljek zatlary size hödürläris. Sanawda hyzmat tapmadyňyzmy? Bize ýazyň ýa-da jaň ediň, hemme zady gurarys!"
+  },
+  "footer": {
+    "address": "Oguzhan köçesi, 120-nji jaý, Aşgabat, Türkmenistan",
+    "title1": "Biz bilen habarlaşyň",
+    "title2": "Sosial media akauntlar",
+    "copy": "2024, Wiva Laour. Allhli hukuklar goralandyr."
   }
 }

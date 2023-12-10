@@ -1,6 +1,6 @@
 import React from "react";
 
-const About = () => {
+const About = ({ strings }) => {
   return (
     <section className="about">
       <div className="autoContainer autoContainer--extraSm">
@@ -11,19 +11,11 @@ const About = () => {
             </div>
           </div>
           <div className="about__content">
-            <h3 className="text--primary">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit
-            </h3>
+            <h3 className="text--primary">{strings.about.title}</h3>
             <p>
-              Viva La’mour Ashgabat based digital and creative agency. Our team
-              is lead in creating digital products. Viva La’mour is not only
-              about creating, but it’s about teaching, and support moves like
-              gender equality.
+              {strings.about.p1}
               <br />
-              Viva La’mour Ashgabat based digital and creative agency. Our team
-              is lead in creating digital products. Viva La’mour is not only
-              about creating, but it’s about teaching, and support moves like
-              gender equality.
+              {strings.about.p2}
             </p>
           </div>
         </div>

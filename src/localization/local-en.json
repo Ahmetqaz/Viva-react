@@ -1,7 +1,44 @@
 {
+  "header": {
+    "button1": "Viva La Mour",
+    "button1_text": "Wedding house",
+    "link1": "Our dress",
+    "link2": "Hair and makeup",
+    "link3": "Our brides",
+    "button2": "Viva Beauty",
+    "link4": "Hair",
+    "link5": "Makeup",
+    "link6": "Nails",
+    "button3": "Viva La Mour",
+    "button3_text": "Production",
+    "link7": "Photo Session",
+    "link8": "Open Party",
+    "link9": "Love Story"
+  },
   "hero": {
-    "title1": "en",
-    "title2": "en",
-    "title3": "en"
+    "title1": "Our dress",
+    "title2": "Hair and makeup",
+    "title3": "Our brides",
+    "title4": "Hair",
+    "title5": "Makeup",
+    "title6": "Nails",
+    "title7": "Photo Session",
+    "title8": "Open Party",
+    "title9": "Love Story"
+  },
+  "about": {
+    "title": "Viva La Mour About",
+    "p1": "At Viva La'mour, we're all about cultivating world-class artisans, creating new designs for our brides, creating the highest quality decor, weddings, celebrating the happiest days, and celebrating birthdays.",
+    "p2": "It's our job to add more beauty to a woman's beauty, hair, makeup, nails, and make our brides look the best!"
+  },
+  "team": {
+    "title": "Viva La’mour” Aşgabatda ýerleşýän sanly agentlikdir.",
+    "p1": "We will provide you with absolutely everything that may be needed on your wedding day. Did not find the service in the list? Just write or call us and we'll organize everything!"
+  },
+  "footer": {
+    "address": "Oguzhan street, home 120, Ashgabat, Turkmenistan",
+    "title1": "Contact us",
+    "title2": "Social media accounts",
+    "copy": "2024, Viva La’mour. All Rights Reserved."
   }
 }

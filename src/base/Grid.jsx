@@ -47,7 +47,6 @@ const Grid = () => {
     }
   };
   let renderArr = controlArr();
-  console.log(renderArr);
   return (
     <section className="grid">
       <div className="autoContainer autoContainer--sm">
