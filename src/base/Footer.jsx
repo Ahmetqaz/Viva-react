@@ -32,15 +32,24 @@ const Footer = ({ strings }) => {
             <div className="footer__group footer__group--space">
               <h4>{strings.footer.title2}</h4>
               <div className="footer__socials">
-                <a href="#" className="footer__socials-button">
+                <a
+                  href="https://www.instagram.com/viva_beauty_ashgabat/?ref=syn_article_sp&hl=tl"
+                  className="footer__socials-button"
+                >
                   <span className="ico ico--stroke">{instagram}</span>
                   <span className="text">@viva_beauty_ashgabat</span>
                 </a>
-                <a href="#" className="footer__socials-button">
+                <a
+                  href="https://www.instagram.com/viva_lamour_wedding/"
+                  className="footer__socials-button"
+                >
                   <span className="ico ico--stroke">{instagram}</span>
                   <span className="text">@viva_lamour_wedding</span>
                 </a>
-                <a href="#" className="footer__socials-button">
+                <a
+                  href="https://www.instagram.com/viva_lamour_production/"
+                  className="footer__socials-button"
+                >
                   <span className="ico ico--stroke">{instagram}</span>
                   <span className="text">@viva_lamour_production</span>
                 </a>
