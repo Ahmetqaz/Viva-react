@@ -31,7 +31,6 @@ export const PopUpCreate = (element, video, arr) => {
       index = 0;
     }
     popImage.src = arr[index];
-    videoSource.src = arr[index];
   });
   prevItem.addEventListener("click", () => {
     index -= 1;
@@ -39,7 +38,6 @@ export const PopUpCreate = (element, video, arr) => {
       index = lengthArr - 1;
     }
     popImage.src = arr[index];
-    videoSource.src = arr[index];
   });
 
   // -----------------
@@ -48,17 +46,18 @@ export const PopUpCreate = (element, video, arr) => {
     let videoButton = item.querySelector(".button--play");
     let videoBg = item.querySelector(".grid__item-bg");
     let state = false;
+    let stateBg = false;
 
     videoButton.addEventListener("click", () => {
       state = !state;
-      if (state) {
-        videoBg.classList.toggle("_hide");
-        videoButton.classList.toggle("_hide");
+      if (state === true) {
+        videoBg.classList.add("_hide");
+        videoButton.classList.add("_hide");
         video.play();
         video.setAttribute("controls", "");
       } else {
-        videoBg.classList.toggle("_hide");
-        videoButton.classList.toggle("_hide");
+        videoBg.classList.remove("_hide");
+        videoButton.classList.remove("_hide");
         video.pause();
         video.removeAttribute("controls");
       }
@@ -66,18 +65,49 @@ export const PopUpCreate = (element, video, arr) => {
 
     video.addEventListener("click", (e) => {
       state = !state;
-      if (state) {
-        videoButton.classList.toggle("_hide");
-        videoBg.classList.toggle("_hide");
+      if (state === true) {
+        videoButton.classList.add("_hide");
+        videoBg.classList.add("_hide");
         video.setAttribute("controls", "");
       } else {
-        videoBg.classList.toggle("_hide");
-        videoButton.classList.toggle("_hide");
+        videoBg.classList.remove("_hide");
+        videoButton.classList.remove("_hide");
         video.pause();
         video.removeAttribute("controls");
       }
     });
+    nextItem.addEventListener("click", () => {
+      index += 1;
+      stateBg = true;
+      if (index === lengthArr) {
+        index = 0;
+      }
+      videoSource.src = arr[index];
+      if (stateBg === true) {
+        videoBg.classList.remove("_hide");
+        videoButton.classList.remove("_hide");
+        video.pause();
+        video.removeAttribute("controls");
+        state = false;
+      }
+    });
+    prevItem.addEventListener("click", () => {
+      stateBg = true;
+      index -= 1;
+      if (index === 0) {
+        index = lengthArr - 1;
+      }
+      videoSource.src = arr[index];
+      if (stateBg === true) {
+        videoBg.classList.remove("_hide");
+        videoButton.classList.remove("_hide");
+        video.pause();
+        video.removeAttribute("controls");
+        state = false;
+      }
+    });
   };
+
   videoControl(videoWrapper);
   const bodyMain = document.body;
   popUp.classList.toggle("active");
