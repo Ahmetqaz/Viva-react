@@ -23,7 +23,7 @@
       flex-direction: column;
       gap: 30px;
       width: 100%;
-      max-width: 950px;
+      max-width: 650px;
       margin: 0 auto;
       background: rgba($black, 0.8);
       border: 1px solid transparent;
@@ -52,10 +52,10 @@
       align-items: center;
       justify-content: center;
       width: 100%;
-      border-radius: 25px;
-      overflow: hidden;
-      .ratioImage {
-        padding-bottom: 70%;
+      img {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
       }
     }
     &-arrows {
@@ -131,13 +131,11 @@
       margin: auto;
       width: 100%;
       max-width: 900px;
-      .ratioImage {
-        padding-bottom: 70%;
-      }
-      &--video {
-        .ratioImage {
-          padding-bottom: 75%;
-        }
+      video {
+        width: 100%;
+        object-fit: contain;
+        border-radius: 20px;
+        overflow: hidden;
       }
     }
   }
@@ -208,16 +206,15 @@ body {
         font-size: 13px;
       }
       &-image {
-        .ratioImage {
-          padding-bottom: 120%;
+        img {
+          border-radius: 10px;
         }
       }
     }
     .grid {
       &__item {
-        .ratioImage {
-          padding-bottom: 120%;
-          border-radius: 10px !important;
+        video {
+          border-radius: 10px;
         }
       }
     }

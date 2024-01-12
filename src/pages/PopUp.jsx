@@ -18,11 +18,9 @@ const PopUp = ({ PopUpClose, nextItem, prevItem }) => {
           <div className="popUp__inner-close" id="close"></div>
           <div className="popUp__inner-videos" id="videoWrapper">
             <div className="grid__item grid__item--video">
-              <div className="ratioImage">
-                <video id="videoSource">
-                  <source src=""></source>
-                </video>
-              </div>
+              <video id="videoSource">
+                <source src=""></source>
+              </video>
               <div className="grid__item-bg"></div>
               <button className="button button--play">
                 <span className="ico">
@@ -44,13 +42,7 @@ const PopUp = ({ PopUpClose, nextItem, prevItem }) => {
           </div>
           <div className="popUp__inner-images active" id="imageWrapper">
             <div className="popUp__inner-image">
-              <div className="ratioImage">
-                <img
-                  src="./images/grid/dress/image-1.png"
-                  alt=""
-                  id="popImage"
-                />
-              </div>
+              <img src="./images/grid/dress/image-1.png" alt="" id="popImage" />
             </div>
           </div>
           <div className="popUp__inner-arrows">

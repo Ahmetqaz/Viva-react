@@ -1314,7 +1314,7 @@ svg {
           flex-direction: column;
   gap: 30px;
   width: 100%;
-  max-width: 950px;
+  max-width: 650px;
   margin: 0 auto;
   background: rgba(12, 12, 12, 0.8);
   border: 1px solid transparent;
@@ -1361,11 +1361,12 @@ svg {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  border-radius: 25px;
-  overflow: hidden;
 }
-.popUp__inner-image .ratioImage {
-  padding-bottom: 70%;
+.popUp__inner-image img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
 }
 .popUp__inner-arrows {
   display: -webkit-box;
@@ -1458,11 +1459,12 @@ svg {
   width: 100%;
   max-width: 900px;
 }
-.popUp .grid__item .ratioImage {
-  padding-bottom: 70%;
-}
-.popUp .grid__item--video .ratioImage {
-  padding-bottom: 75%;
+.popUp .grid__item video {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  border-radius: 20px;
+  overflow: hidden;
 }
 .popUp.active {
   pointer-events: all;
@@ -2171,12 +2173,11 @@ body.freeze {
   .popUp__inner-button {
     font-size: 13px;
   }
-  .popUp__inner-image .ratioImage {
-    padding-bottom: 120%;
+  .popUp__inner-image img {
+    border-radius: 10px;
   }
-  .popUp .grid__item .ratioImage {
-    padding-bottom: 120%;
-    border-radius: 10px !important;
+  .popUp .grid__item video {
+    border-radius: 10px;
   }
 }
 @media (max-width: 460px) {
