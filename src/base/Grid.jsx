@@ -12,8 +12,6 @@ import {
 import { arrParty, arrSession, arrStory } from "../data/DataVideos";
 import { play } from "../components/Svg.";
 
-
-
 const Grid = () => {
   const location = useLocation();
   const state = location.state;
@@ -56,7 +54,7 @@ const Grid = () => {
               className={`grid__item ${state.video ? "grid__item--video" : ""}`}
               key={i}
               onClick={() => {
-                PopUpCreate(item, state.video);
+                PopUpCreate(item, state.video, renderArr);
               }}
             >
               {state.video ? <div className="grid__item-bg"></div> : ""}

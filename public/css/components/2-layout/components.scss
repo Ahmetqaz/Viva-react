@@ -155,13 +155,16 @@
     }
   }
   &--play {
-    width: 80px;
-    height: 80px;
+    width: 4em;
+    height: 4em;
     border-radius: 50%;
     background: $primary;
+    font-size: 20px;
+    padding: unset;
     .ico {
-      width: 25px;
-      height: 25px;
+      font-size: inherit;
+      width: 1.2em;
+      height: 1.2em;
       color: $white;
       transition: all 0.3s ease;
     }
@@ -559,6 +562,11 @@
   .logo {
     font-size: 26px;
   }
+  .button {
+    &--play {
+      font-size: 18px;
+    }
+  }
 }
 @mixin components-1025 {
   .logo {
@@ -567,9 +575,19 @@
   .main {
     padding-top: 95px;
   }
+  .button {
+    &--play {
+      font-size: 16px;
+    }
+  }
 }
 @mixin components-460 {
   .logo {
     font-size: 20px;
+  }
+  .button {
+    &--play {
+      font-size: 14px;
+    }
   }
 }

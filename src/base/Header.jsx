@@ -36,19 +36,7 @@ const Header = ({ strings }) => {
   const onFogClick = (e) => {
     if (e.target === e.currentTarget && menu) toggle();
   };
-  useEffect(() => {
-    const onScroll = () => {
-      if (document.documentElement.scrollTop > 20) {
-        header.current.classList.add("sticky");
-      } else {
-        header.current.classList.remove("sticky");
-      }
-    };
-    if (header.current) {
-      window.addEventListener("scroll", onScroll);
-    }
-    return () => window.removeEventListener("scroll", onScroll);
-  }, [header]);
+
   const data = [
     { title: 1, arr: "arrDress" },
     { title: 2, arr: "arrBrides" },

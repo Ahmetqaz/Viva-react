@@ -7,8 +7,9 @@ const Home = ({ strings }) => {
   return (
     <>
       <Hero imgSrc={"./images/hero/hero.png"} size={false} strings={strings} />
-      <About strings={strings} />
+      <About strings={strings} src="./images/about.png" />
       <Team strings={strings} />
+      <About strings={strings} src="./images/about.png" modifier="secondary" />
     </>
   );
 };

@@ -1,13 +1,13 @@
 import React from "react";
 
-const About = ({ strings }) => {
+const About = ({ strings, modifier, src }) => {
   return (
-    <section className="about">
+    <section className={`about ${modifier ? "about--secondary" : ""}`}>
       <div className="autoContainer autoContainer--extraSm">
         <div className="about__inner">
           <div className="about__image">
             <div className="ratioImage">
-              <img src="./images/about.png" alt="pic" />
+              <img src={src} alt="pic" />
             </div>
           </div>
           <div className="about__content">

@@ -1,5 +1,5 @@
 .header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -17,11 +17,6 @@
     .burger {
       display: none;
     }
-  }
-  &.sticky {
-    position: fixed;
-    animation: 0.3s sticky ease-in;
-    transition-duration: 0.5s;
   }
 }
 .nav {

@@ -6,6 +6,7 @@ import Gallery from "./pages/gallery/Gallery";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PopUpClose } from "./utils/PopUpControl";
 import useLocalization from "./hooks/useLocalization";
+import PopUp from "./pages/PopUp";
 const App = () => {
   const strings = useLocalization();
 
@@ -22,15 +23,7 @@ const App = () => {
             ></Route>
           </Routes>
           <Footer strings={strings} />
-          <div
-            className="popUp"
-            id="popUp"
-            onClick={(e) => {
-              PopUpClose(e);
-            }}
-          >
-            <div className="popUp__inner"></div>
-          </div>
+          <PopUp PopUpClose={PopUpClose} />
         </main>
       </BrowserRouter>
     </>

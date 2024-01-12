@@ -92,3 +92,14 @@ export const play = (
     />
   </svg>
 );
+export const arrow = (
+  <svg width="800px" height="800px" viewBox="0 0 24 24" fill="none">
+    <path
+      d="M4 12H20M20 12L14 6M20 12L14 18"
+      stroke="currentCollor"
+      strokeWidth="1.5"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    />
+  </svg>
+);

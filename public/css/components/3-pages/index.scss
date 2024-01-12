@@ -79,6 +79,13 @@
       color: $gray;
     }
   }
+  &--secondary {
+    .about {
+      &__image {
+        order: 1;
+      }
+    }
+  }
 }
 .team {
   padding: 50px 0 150px;
