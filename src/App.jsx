@@ -7,6 +7,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { PopUpClose } from "./utils/PopUpControl";
 import useLocalization from "./hooks/useLocalization";
 import PopUp from "./pages/PopUp";
+import "./css/main.scss";
 const App = () => {
   const strings = useLocalization();
 
